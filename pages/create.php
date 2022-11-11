@@ -11,18 +11,20 @@
 <body>
     <div class="container mt-5">
 
-        <?php include('alertMessage.php') ?>
+        <?php include('../includes/alertMessage.php') ?>
 
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
+
                     <div class="card-header">
                         <h4>Add Student
-                            <a href="" class="btn btn-danger float-end">BACK</a>
+                            <a href="../index.php" class="btn btn-danger float-end">BACK</a>
                         </h4>
                     </div>
+                    
                     <div class="card-body">
-                        <form action="script.php" method="POST">
+                        <form action="../script.php" method="POST">
 
                             <div class="mb-3">
                                 <label>Name:</label>
