@@ -26,4 +26,26 @@ if (isset($_POST['saveStudent'])) {
     }
 }
 
+if (isset($_POST['updateStudent']))
+    $id = mysqli_real_escape_string($connection->con, $_POST['id']);
+    $name = mysqli_real_escape_string($connection->con, $_POST['name']);
+    $email = mysqli_real_escape_string($connection->con, $_POST['email']);
+    $phone = mysqli_real_escape_string($connection->con, $_POST['phone']);
+    $age = mysqli_real_escape_string($connection->con, $_POST['age']);
+    $course = mysqli_real_escape_string($connection->con, $_POST['course']);
+
+    $query = "UPDATE tb_student SET name='$name', '$email', '$phone', '$age', '$course' WHERE id='$id'";
+    $query_run = mysqli_query($connection->con, $query);
+
+    if ($query_run) {
+        $_SESSION['message'] = 'Student updated!';
+        header("Location: pages/create.php");
+        exit(0);
+    }
+    else {
+        $_SESSION['message'] = 'Student not updated! :(';
+        header("Location: pages/create.php");
+        exit(0);
+}
+
 ?>

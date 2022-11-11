@@ -11,7 +11,9 @@
 <body>
     <div class="container mt-5">
 
-        <?php include('../includes/alertMessage.php') ?>
+        <?php
+        include('../includes/alertMessage.php')
+        ?>
 
         <div class="row">
             <div class="col-md-12">
@@ -19,7 +21,7 @@
 
                     <div class="card-header">
                         <h4>Add Student
-                            <a href="../index.php" class="btn btn-danger float-end">BACK</a>
+                            <a href="../index.php" class="btn btn-danger float-end">Back</a>
                         </h4>
                     </div>
                     

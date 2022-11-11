@@ -45,7 +45,7 @@ require '../connection/dbConnection.php';
                                             <td><?= $student['course']?></td>
                                             <td>
                                                 <a href="" class="btn btn-info btn-sm">View</a>
-                                                <a href="" class="btn btn-success btn-sm">Edit</a>
+                                                <a href="./update.php/?id=<?=$student['id']?>" class="btn btn-success btn-sm">Edit</a>
                                                 <a href="" class="btn btn-danger btn-sm">Delete</a>
                                             </td>
                                         </tr>
