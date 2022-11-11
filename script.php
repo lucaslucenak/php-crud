@@ -1,6 +1,6 @@
 <?php
 session_start();
-require './connection/dbConnection.php';
+require 'dbConnection.php';
 
 $connection = new Connection();
 
@@ -16,12 +16,12 @@ if (isset($_POST['saveStudent'])) {
 
     if ($query_run) {
         $_SESSION['message'] = 'Student saved!';
-        header("Location: pages/create.php");
+        header("Location: create.php");
         exit(0);
     }
     else {
         $_SESSION['message'] = 'Student not saved! :(';
-        header("Location: pages/create.php");
+        header("Location: create.php");
         exit(0);
     }
 }
@@ -33,18 +33,19 @@ if (isset($_POST['updateStudent']))
     $phone = mysqli_real_escape_string($connection->con, $_POST['phone']);
     $age = mysqli_real_escape_string($connection->con, $_POST['age']);
     $course = mysqli_real_escape_string($connection->con, $_POST['course']);
+    printf("%d, %s, %s, %s, %d, %s", $id, $name, $email, $phone, $age, $course);
 
-    $query = "UPDATE tb_student SET name='$name', '$email', '$phone', '$age', '$course' WHERE id='$id'";
+    $query = "UPDATE tb_student SET name='$name', email='$email', phone='$phone', age=$age, course='$course' WHERE id=$id";
     $query_run = mysqli_query($connection->con, $query);
 
     if ($query_run) {
         $_SESSION['message'] = 'Student updated!';
-        header("Location: pages/create.php");
+        header("Location: read.php");
         exit(0);
     }
     else {
         $_SESSION['message'] = 'Student not updated! :(';
-        header("Location: pages/create.php");
+        header("Location: read.php");
         exit(0);
 }
 

@@ -1,5 +1,5 @@
 <?php session_start();
-require '../connection/dbConnection.php';
+require 'dbConnection.php';
 ?>
 <!doctype html>
 <html lang="en">
@@ -45,7 +45,7 @@ require '../connection/dbConnection.php';
                                             <td><?= $student['course']?></td>
                                             <td>
                                                 <a href="" class="btn btn-info btn-sm">View</a>
-                                                <a href="./update.php/?id=<?=$student['id']?>" class="btn btn-success btn-sm">Edit</a>
+                                                <a href="update.php?id=<?=$student['id']?>" class="btn btn-success btn-sm">Edit</a>
                                                 <a href="" class="btn btn-danger btn-sm">Delete</a>
                                             </td>
                                         </tr>
@@ -60,7 +60,7 @@ require '../connection/dbConnection.php';
                     </tbody>
                 </table>
             </div>
-            <a href="../index.php" class="btn btn-danger float-end">BACK</a>
+            <a href="index.php" class="btn btn-danger float-end">BACK</a>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
