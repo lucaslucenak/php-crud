@@ -17,7 +17,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Add a new student</h5>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="create.php" class="btn btn-primary">Add Student</a>
+                        <a href="pages/create.php" class="btn btn-primary">Add Student</a>
                     </div>
                 </div>
             </div>
@@ -26,7 +26,7 @@
                     <div class="card-body">
                         <h5 class="card-title">See all students</h5>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="read.php" class="btn btn-primary">See Students</a>
+                        <a href="./pages/read.php" class="btn btn-primary">See Students</a>
                     </div>
                 </div>
             </div>

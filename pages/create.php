@@ -12,7 +12,7 @@
     <div class="container mt-5">
 
         <?php
-        include('alertMessage.php')
+        include('components/alertMessage.php')
         ?>
 
         <div class="row">
@@ -21,12 +21,12 @@
 
                     <div class="card-header">
                         <h4>Add Student
-                            <a href="index.php" class="btn btn-danger float-end">Back</a>
+                            <a href="../index.php" class="btn btn-danger float-end">Back</a>
                         </h4>
                     </div>
                     
                     <div class="card-body">
-                        <form action="script.php" method="POST">
+                        <form action="../script.php" method="POST">
 
                             <div class="mb-3">
                                 <label>Name:</label>

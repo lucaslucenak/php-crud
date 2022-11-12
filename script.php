@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'dbConnection.php';
+require './connection/dbConnection.php';
 
 $connection = new Connection();
 
@@ -16,12 +16,12 @@ if (isset($_POST['saveStudent'])) {
 
     if ($query_run) {
         $_SESSION['message'] = 'Student saved!';
-        header("Location: create.php");
+        header("Location: pages/create.php");
         exit(0);
     }
     else {
         $_SESSION['message'] = 'Student not saved! :(';
-        header("Location: create.php");
+        header("Location: pages/create.php");
         exit(0);
     }
 }
@@ -40,12 +40,12 @@ if (isset($_POST['updateStudent']))
 
     if ($query_run) {
         $_SESSION['message'] = 'Student updated!';
-        header("Location: read.php");
+        header("Location: pages/read.php");
         exit(0);
     }
     else {
         $_SESSION['message'] = 'Student not updated! :(';
-        header("Location: read.php");
+        header("Location: pages/read.php");
         exit(0);
 }
 

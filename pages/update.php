@@ -11,7 +11,7 @@
 <body>
 <div class="container mt-5">
 
-    <?php include('alertMessage.php') ?>
+    <?php include('components/alertMessage.php') ?>
 
     <div class="row">
         <div class="col-md-12">
@@ -19,13 +19,13 @@
 
                 <div class="card-header">
                     <h4>Edit Student
-                        <a href="index.php" class="btn btn-danger float-end">Back</a>
+                        <a href="../index.php" class="btn btn-danger float-end">Back</a>
                     </h4>
                 </div>
 
                 <div class="card-body">
                     <?php
-                        include('dbConnection.php');
+                        include('../connection/dbConnection.php');
                         $con = new Connection();
 
                         if(isset($_GET['id'])) {
@@ -36,7 +36,7 @@
                             if (mysqli_num_rows($queryRun) > 0) {
                                 $student = mysqli_fetch_array($queryRun);
                                 ?>
-                                    <form action="script.php" method="POST">
+                                    <form action="../script.php" method="POST">
 
                                         <input type="hidden" name="id" value="<?=$student['id']?>">
 
@@ -77,8 +77,6 @@
                             }
                         }
                     ?>
-
-
                 </div>
             </div>
         </div>
