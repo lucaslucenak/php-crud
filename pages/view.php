@@ -34,7 +34,7 @@
                         if (mysqli_num_rows($queryRun) > 0) {
                             $student = mysqli_fetch_array($queryRun);
                             ?>
-                            <form action="../script.php" method="POST">
+                            <form action="../scripts/script.php" method="POST">
 
                                 <div class="mb-3">
                                     <label for="">Id:</label>

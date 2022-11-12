@@ -26,7 +26,7 @@
                     </div>
                     
                     <div class="card-body">
-                        <form action="../script.php" method="POST">
+                        <form action="../scripts/script.php" method="POST">
 
                             <div class="mb-3">
                                 <label>Name:</label>

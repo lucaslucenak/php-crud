@@ -46,7 +46,9 @@ require '../connection/dbConnection.php';
                                             <td>
                                                 <a href="view.php?id=<?=$student['id']?>" class="btn btn-info btn-sm">View</a>
                                                 <a href="update.php?id=<?=$student['id']?>" class="btn btn-success btn-sm">Edit</a>
-                                                <a href="" class="btn btn-danger btn-sm">Delete</a>
+                                                <form action="../scripts/script.php" method="POST" class="d-inline">
+                                                    <button type="submit" name="deleteStudent" value="<?=$student['id']?>" class="btn btn-danger btn-sm">Delete</button>
+                                                </form>
                                             </td>
                                         </tr>
                                     <?php
