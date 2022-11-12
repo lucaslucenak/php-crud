@@ -19,7 +19,7 @@
 
                 <div class="card-header">
                     <h4>Edit Student
-                        <a href="../index.php" class="btn btn-danger float-end">Back</a>
+                        <a href="read.php" class="btn btn-danger float-end">Back</a>
                     </h4>
                 </div>
 
