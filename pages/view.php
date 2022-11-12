@@ -36,7 +36,10 @@
                             ?>
                             <form action="../script.php" method="POST">
 
-                                <input type="hidden" name="id" value="<?= $student['id'] ?>">
+                                <div class="mb-3">
+                                    <label for="">Id:</label>
+                                    <input type="number" name="id" class="form-control" value="<?= $student['id'] ?>" disabled>
+                                </div>
 
                                 <div class="mb-3">
                                     <label>Name:</label>
